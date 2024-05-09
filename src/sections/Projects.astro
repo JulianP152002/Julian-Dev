@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets"
+import icon from '../../public/icon.svg'
+import icon1 from '../../public/icon1.svg'
+import boda from '../../public/projectboda.png'
+import bmw from '../../public/BMW.png'
+---
+
+<section class=" flex w-11/12 flex-col" >
+    <div class="flex flex-col content-center items-center my-8 text-black ">
+        <h2 class=" text-2xl font-bold mb-4 " >Proyectos</h2>
+        <h4>Aqui hay algunos de los proyectos en los que he trabajado estos meses</h4>
+    </div>
+
+    <div class=" px-6 mx-10 h-auto flex mt-2 w-full content-center items-center ">
+        <div class=" w-1/2 h-auto m-2 py-8 px-5 overflow-hidden rounded-3xl bg-white">
+            <span class=" relative w-full text-center items-center flex content-center mb-4 size-5 font-bold">
+                <Image class="mr-2" src={icon1} alt="icono" />
+                <h2 class=" text-black text-lg">Experiencia Laboral</h2>
+                <a href="https://boda-joseluis-daniela.vercel.app/" class=" rounded-full border-2 p-2 border-black top-0.25 cursor-pointer hover:bg-gray-600 transition-all ease-in-out  right-1 absolute">
+                    <Image class=" " src={icon} alt="icono" />
+
+                </a>
+                
+            </span>
+            <h2 class=" ml-1 mt-2 text-2xl font-bold">AndiAutos</h2>
+            <p class=" size-4 font-normal text-gray-700 text-nowrap">Estoy elaborando este proyecto para una compañia de vehiculos BMW</p>
+            <h4 class=" mt-4 text-black font-bold"> Astro, TypeScrip, JavaScript, Css, Tailwind, Html.</h4>
+ 
+            <div class=" relative h-60 mt-8">
+                <a href="https://boda-joseluis-daniela.vercel.app/">
+                    <Image class="project_primary-img rounded-xl absolute w-full h-80 -right-6 hover:scale-105 duration-500 transition-all ease-in-out "  
+                        src={bmw} alt="imagen de proyecto"/>
+                </a>
+                
+            </div>
+
+        </div>
+
+
+        <div class=" w-1/2 project_rigth text-pretty">
+            <div class=" w-full  m-2 py-8 px-5 overflow-hidden rounded-3xl bg-white">
+                <div class=" relative w-full flex content-center items-center mb-4 size-5 font-bold">
+                    <Image class="mr-2" src={icon1} alt="icono" />
+                    <h2 class=" text-black text-lg">Experiencia Laboral</h2>
+                    <a href="https://boda-joseluis-daniela.vercel.app/" class=" rounded-full border-2 p-2 border-black top-0.25 cursor-pointer hover:bg-gray-600 transition-all ease-in-out  right-1 absolute">
+                        <Image class=" " src={icon} alt="icono" />
+    
+                    </a>
+
+                </div>
+                <h2 class=" ml-1 mt-2 text-2xl  ">Tarjeta Inivitacion</h2>
+                <p class=" size-4 font-bold text-gray-700  w-full text-pretty " >Se trata de unas invitaciones para una boda
+                    de tunja</p>
+                <h4 class=" mt-4 text-black font-bold" >JavaScript, Css, Html.</h4>
+
+                <div class=" relative h-60 mt-8">
+                    <a href="https://boda-joseluis-daniela.vercel.app/">
+                        <Image class="project_primary-img rounded-xl absolute w-full h-80 -right-6 hover:scale-105 duration-500 transition-all ease-in-out "  src={boda} alt="imagen de proyecto"/>
+                    </a>
+                    
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+</section>

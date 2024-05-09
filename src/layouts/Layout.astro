@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import '@fontsource-variable/nunito-sans';
 ---
 
 <!doctype html>
@@ -26,6 +27,9 @@ const { title } = Astro.props;
 		font-family: system-ui, sans-serif;
 		background: #F5F5F7;
 		background-size: 224px;
+	}
+	body {
+  		font-family: 'Nunito Sans Variable', sans-serif;
 	}
 
 </style>
