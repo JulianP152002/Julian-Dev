@@ -10,6 +10,7 @@ import '@fontsource-variable/nunito-sans';
 <!doctype html>
 <html lang="es">
 	<head>
+
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -17,8 +18,27 @@ import '@fontsource-variable/nunito-sans';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class=" dark:bg-red-800">
 		<slot />
+		<script src="../scripts/navBar.js"></script>
+		<script is:inline>
+			const theme = (() => {
+			  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+				return localStorage.getItem("theme");
+			  }
+			  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				return "dark";
+			  }
+			  return "light";
+			})();
+		  
+			if (theme === "light") {
+			  document.documentElement.classList.remove("dark");
+			} else {
+			  document.documentElement.classList.add("dark");
+			}
+			window.localStorage.setItem("theme", theme);
+		</script>
 	</body>
 </html>
 <style is:global>

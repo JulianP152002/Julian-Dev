@@ -1,0 +1,20 @@
+---
+import Image from "astro/components/Image.astro"
+import Heart from '../../public/heart.svg'
+ 
+---
+
+<section class=" dark:bg-zinc-800 relative m-auto md:ml-7  w-11/12 mx-16 rounded-3xl my-10 p-10 content-between bg-white flex  ">
+    <div class=" flex flex-col dark:text-gray-200 text-base font-medium text-gray-500 ">
+        <span>© 2024 Todos los derechos reservados a Julian Parra </span>
+
+        <span >Hecho con amor
+            <Image src={Heart} alt="corazon"/>
+            
+        </span>
+       
+    </div>
+    <div class=" dark:text-gray-400 lg:hidden flex absolute right-8 text-base font-medium text-gray-500">
+        <span id="span">Ultima Actualizacion Marzo 2024</span>
+    </div>
+</section>

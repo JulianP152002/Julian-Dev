@@ -1,29 +1,172 @@
-<div class="projects">
-    <h2 class="tecnologhes_title">Tecnologias</h2>
-</div>
+---
+import { Image } from "astro:assets";
+import java from "../../public/Tecnologes/javascript.svg";
+import typescript from "../../public/Tecnologes/typescript.svg";
+import angular from "../../public/Tecnologes/Angular.svg";
+import react from "../../public/Tecnologes/react.svg";
+import astro from "../../public/Tecnologes/astro.svg";
+import html from "../../public/Tecnologes/html.svg";
+import css from "../../public/Tecnologes/css.svg";
+import tailwind from "../../public/Tecnologes/tailwing.svg";
+---
 
-<section class="grid_tecnologia">
+<h2 class="text-center my-8 text-2xl font-bold dark:text-white">Tecnologias</h2>
 
+<section
+    class="grid_tecnologia fondo bg-white dark:bg-zinc-800 lg:max-w-4xl lg-ml-auto mg:flex mg:w-full md:w-full md:flex md:justify-center md:items-center"
+>
+
+    <script>
+        document.getElementById('button')?.addEventListener('click', () => {
+            let tec = document.querySelector('.grid_tecnologia')
+          if (localStorage.theme === 'dark') {
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove('dark');
+            tec.classList.remove('dark')
+            tec.classList.add('fondo')
+          } else {
+            localStorage.theme = 'dark';
+            document.documentElement.classList.add('dark'),
+            tec.classList.add('dark')
+          }
+        });
+    </script>
     <div class="tecnologias_container">
-        <img  src="/Accents/img/js.png" alt="">
-        <img  src="/Accents/img/icons8-angularjs-96.png" alt="">
-        <img   src="/Accents/img/react.png" alt="">  
-        <img  src="/Accents/img/icons8-mecanografiado-96.png" alt="">
-        <img  src="/Accents/img/icons8-html-5-96.png" alt="">   
-        <img  class="tec_img" src="/Accents/img/icons8-viento-de-cola-css-96.png" alt="">  
-        <img  class="tec_img" src="/Accents/img/icons8-astro-96.png" alt="">            
+        <div class="content">
+            <Image class="img" src={java} alt="icono de java" />
+            <Image class="img" src={astro} alt="icono de astro" />
+            <Image class="img img-react" src={react} alt="icono de react" />
+            <Image class="img" src={angular} alt="icono de angular" />
+            <Image class="img" src={tailwind} alt=" icono de tailwind" />
+            <Image class="img" src={html} alt="icono de html" />
+            <Image class="img" src={typescript} alt=" icono de typescript" />
+            <Image class="img" src={css} alt="icono de css" />
+        </div>
     </div>
-    <div class="tecnologias_container">
-        <img  src="/Accents/img/js.png" alt="">
-        <img  src="/Accents/img/icons8-angularjs-96.png" alt="">
-        <img  src="/Accents/img/react.png" alt="">  
-        <img  src="/Accents/img/icons8-mecanografiado-96.png" alt="">
-        <img  src="/Accents/img/icons8-html-5-96.png" alt="">   
-        <img  src="/Accents/img/icons8-viento-de-cola-css-96.png" alt="">  
-        <img  src="/Accents/img/icons8-astro-96.png" alt="">                         
+    <div class="tecnologias_container tecnologias_container-margin">
+        <div class="content">
+            <Image class="img" src={java} alt="icono de java" />
+            <Image class="img" src={astro} alt="icono de astro" />
+            <Image class="img img-react" src={react} alt="icono de react" />
+            <Image class="img" src={angular} alt="icono de angular" />
+            <Image class="img" src={tailwind} alt=" icono de tailwind" />
+            <Image class="img" src={html} alt="icono de html" />
+            <Image class="img" src={typescript} alt=" icono de typescript" />
+            <Image class="img" src={css} alt="icono de css" />
+        </div>
     </div>
 
+    <style>
+        .tecnologias_container-margin {
+            margin-left: 25rem;
+        }
+        .content {
+            display: flex;
+        }
+        .tecnologias_container {
+            padding: 2rem;
+            animation: 14s animacion infinite linear;
+            display: flex;
+        }
+        .grid_tecnologia {
+            display: flex;
+            position: relative;
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+
+            padding: 1.5rem 2rem;
+            border-radius: 2rem;
+            white-space: nowrap;
+            transition: all 400ms ease;
+        }
+
+        .fondo::before,
+        .fondo::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 10rem;
+            height: 100%;
+            z-index: 5;
+        }
+        .fondo::before {
+            left: 0;
+            background: linear-gradient(
+                to left,
+                rgba(255, 255, 255, 0),
+                #ffffff
+            );
+        }
+
+
+        .fondo::after {
+            right: 0;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0),
+                #ffffff
+            );
+        }
+
+        .dark::before,
+        .dark::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 10rem;
+            height: 100%;
+            z-index: 5;
+        }
+        .dark::before {
+            left: 0;
+            background: linear-gradient(
+                to left,
+                rgba(255, 255, 255, 0),
+                #111
+            );
+        }
+
+
+        .dark::after {
+            right: 0;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0),
+                #111
+            );
+        }
 
 
 
+        .grid_tecnologia:hover .tecnologias_container {
+            animation-play-state: paused;
+        }
+
+        @keyframes animacion {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-142%);
+            }
+        }
+
+        .img {
+            filter: grayscale(100%);
+            margin: 0 3.5rem;
+            max-height: 8rem;
+            min-height: 4rem;
+            height: 4rem;
+            transition: all 200ms ease-in-out;
+        }
+        .img-react {
+            width: 4rem;
+        }
+
+        .img:hover {
+            filter: none;
+        }
+    </style>
 </section>
