@@ -5,13 +5,17 @@ import Header from '../sections/Header.astro';
 import Projects from '../sections/Projects.astro';
 import Tecnologes from '../sections/Tecnologes.astro';
 import Footer from '../sections/Footer.astro';
-
+import About from '../sections/About.astro';
 ---
 
 <Layout title="Portafolio Julian">
 	<main class=" w-full dark:bg-zinc-900" >
-		<Nav></Nav>
-		<Header></Header>
+		<div class="bg">
+			<Nav ></Nav>
+			<Header></Header>
+		</div>
+		<About/>
+
 		<Projects></Projects>
 		<Tecnologes></Tecnologes>
 		<Footer></Footer>
@@ -19,4 +23,17 @@ import Footer from '../sections/Footer.astro';
 	</main>
 	
 </Layout>
+
+<style>
+	.nav{
+		z-index: 999;
+	}
+	.bg {
+        width: 100%;
+        height: 36rem;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,0.8939130434782608) 90%);
+		
+	}
+</style>
 

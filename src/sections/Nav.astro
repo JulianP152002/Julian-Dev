@@ -7,7 +7,7 @@ import IconLight from '../../public/light.svg'
 
 ---
   
-<section class="grid_nav flex justify-between mx-20 py-6 text-center items-center">
+<section class="grid_nav flex  justify-between mx-20 py-6 text-center items-center">
     <div  class=" dark:bg-slate-100 dark:font-bold dark:text-slate-950 bg-black text-white px-2 py-1 font-bold text-center ">
         J.P
     </div>
@@ -27,7 +27,7 @@ import IconLight from '../../public/light.svg'
     </div>
 
 
-    <button class=" px-3 py-2 text-black bg-slate-100 rounded-3xl hover:scale-110 hover:bg-white transition duration-300 ease-in-out border border-black divide-black">
+    <button class="z-10 px-3 py-2 text-black bg-slate-100 rounded-3xl hover:scale-110 hover:bg-white transition duration-300 ease-in-out border border-black divide-black">
         <a class=" flex flex-row" href="/cv/CvJulianParra.pdf" download>
             <Image class=" icon mr-2" src={IconDow} alt="icono" />
             <span class=" lg:hidden ">Descargar CV</span>
@@ -39,7 +39,10 @@ import IconLight from '../../public/light.svg'
 </section>
 
 <style>
-    
+    .grid_nav{
+        display: flex;
+        z-index: 900;
+    }
     .grid_nav--fixer{
         width: 100%;
         position: fixed;

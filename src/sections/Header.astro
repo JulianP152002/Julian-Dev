@@ -1,14 +1,89 @@
 ---
 import { Image } from "astro:assets"
-import IconDow from '../../public/dowloang.svg'
-import IconGit from '../../public/git.svg'
-import IconLink from '../../public/linkeding.svg'
-import IconMail from '../../public/mail.svg'
-import Portada from '../../public/portada.jpg'
+
+import IconGit from '../../public/icons/git.svg'
+import IconLink from '../../public/icons/linkeding.svg'
+import IconMail from '../../public/icons/mail.svg'
+import Julian from '../../public/julian.png'
+import IconDow from '../../public/descargar.svg'
+import Whatsapp from '../../public/icons/whatsapp-icon.svg'
+
 ---
 
-<section class="flex lg:flex-col lg:h-3/4 md:mx-0 mx-20">
-    <div class="header md:bg-center lg:m-auto lg:w-11/12 lg:min-h-72 lg:mb-5 lg:w-120 flex-col relative basis-full text-end content-end items-end w-full h-80 rounded-2xl bg-slate-500 p-2 ">
+<section class=" flex lg:flex-col lg:h-3/4 md:mx-0 mx-20">
+    <div class="z-0 block items-end content-end ">
+        <img class="julian z-0 top-0 md:bottom-28 block item right-0 md:right-20 sm:right-10 absolute" src={Julian.src} alt="">
+    </div>
+    <div class="z-10 lg:pt-32 items-center text-center">
+        <div class="w-full pb-10 md:pb-5 text-center text-wrap z-10 pt-10 m-auto">
+            <h1 class="text z-10 text-7xl md:text-5xl text-wrap text-white font-extrabold" >Michael Julian <br>Parra Cradenas</h1>
+        </div>
+        <div class=" m-auto pb-10 md:pb-5 items-center">
+            <button class="z-10 w-40 lg:w-20 m-auto  px-3 py-2 text-black bg-red-600 rounded-3xl hover:scale-90 hover:bg-white transition duration-300 ease-in-out border border-black divide-black">
+                <a class=" flex flex-row" href="/cv/CvJulianParra.pdf" download>
+                    <Image class="icon mr-2" src={IconDow} alt="icono" />
+                    <span class=" lg:hidden ">Descargar CV</span>
+                    <span class=" hidden lg:block ">CV</span>
+                </a>
+
+            </button>
+            <button class="z-10 w-40 lg:w-20 m-auto  px-3 py-2 text-black bg-red-600 rounded-3xl hover:scale-90 hover:bg-white transition duration-300 ease-in-out border border-black divide-black">
+                <a target="_blank" class=" flex flex-row" href="https://wa.me/573132754789" >
+                    <Image class="text-bold icon w-6 mr-2" src={Whatsapp} alt="icono" />
+                    <span class=" lg:hidden ">Contactame</span>
+                    <span class=" hidden lg:block ">WS</span>
+                </a>
+
+            </button>
+    </div>
+    <p class="text w-3/4 md:w-1/2 text-center text-3xl md:text-2xl m-auto z-10 text-white font-bold ">Estoy listo para que llevemos nuestra vision a otro nivel</p>
+        <div class="block bottom-12 md:bottom-1 left-0 items-end absolute">
+        <ul class="flex ml-2">
+            <li class="hover:scale-105 ease-linear  flex font-medium size-4 text-nowrap text-black bg-white w-auto cursor-pointer text-center items-center content-center py-3 px-4 mr-2 transition-all rounded-md">
+                <a
+                    rel="noopener"
+                    class=" flex "
+                    target="_blank"
+                    href="https://github.com/JulianP152002"
+                >
+                <Image class=" mr-1 " src={IconGit} alt="icono" />
+                <span class=" md:hidden">Git Hub</span></a>
+            </li>
+            <li
+                class=" hover:scale-105 ease-linear flex font-medium size-4 text-black bg-white w-auto cursor-pointer text-center items-center py-3 px-2 mr-2 transition-all rounded-md"
+            >
+                <a
+                    class=" flex "
+                    rel="noopener"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/maicol-julian-parra-c%C3%A1rdenas-551a74301/"
+                >
+                <Image class=" mr-1 " src={IconLink} alt="icono" />
+                <span class=" md:hidden">Linkedin</span></a>
+            </li>
+
+            <li
+                class="hover:scale-105 ease-linear flex font-medium size-4 text-black bg-white w-auto cursor-pointer text-center items-center py-3 px-3 mr-2 transition-all rounded-md"
+            >
+                <a
+                    rel="noopener"
+                    class=" flex "
+                    target="_blank"
+                    href="mailto:parracardenas17@gmail.com"
+                >
+                <Image class=" mr-1 " src={IconMail} alt="icono" />
+                <span class=" md:hidden">Email</span></a>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+
+
+    
+    
+    
+    <!-- <div class="header md:bg-center lg:m-auto lg:w-11/12 lg:min-h-72 lg:mb-5 lg:w-120 flex-col relative basis-full text-end content-end items-end w-full h-80 rounded-2xl bg-slate-500 p-2 ">
 
         
         <h1 class="flex ml-3  text-nowrap text-2xl font-bold">
@@ -72,15 +147,25 @@ import Portada from '../../public/portada.jpg'
                 
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </div>
+    </div> -->
 </section>
 
+
 <style>
+
+    .julian{
+        z-index: 0;
+        filter: drop-shadow(-3px 6px 21px #000000);
+    }
+    .text{
+        filter: drop-shadow(-3px 6px 21px #000000);
+    }
     .header{
         background-image: url(../../public/portada.jpg);
         background-size: 50rem 38rem;
         background-repeat: no-repeat;
         background-position-y: -8rem;
+        z-index: 0;
     
     }
 </style> 
