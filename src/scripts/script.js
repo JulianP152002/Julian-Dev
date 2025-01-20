@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (scrool > 1100) {
-        title3.style.opacity = 0.4 + scrool / 1000;
+        title3.style.opacity = 1;
         title2.style.opacity = 0;
         bg.classList.add("e");
       }
