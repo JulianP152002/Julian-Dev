@@ -38,6 +38,20 @@ import '@fontsource-variable/nunito-sans';
       }
       window.localStorage.setItem('theme', theme);
     </script>
+    <script>
+      document.getElementById('button')?.addEventListener('click', () => {
+        let tec = document.querySelector('.grid_tecnologia');
+        if (localStorage.theme === 'dark') {
+          localStorage.theme = 'light';
+          document.documentElement.classList.remove('dark');
+          tec.classList.remove('dark');
+          tec.classList.add('fondo');
+        } else {
+          localStorage.theme = 'dark';
+          document.documentElement.classList.add('dark'), tec.classList.add('dark');
+        }
+      });
+    </script>
   </body>
 </html>
 <style is:global>

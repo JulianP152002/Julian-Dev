@@ -10,6 +10,8 @@ import tailwind from '../../public/Tecnologes/tailwing.svg';
 import react from '../../public/Tecnologes/react.svg';
 import node from '../../public/Tecnologes/nodejs.svg';
 import mongo from '../../public/Tecnologes/mongodb.svg';
+import astro from '../../public/Tecnologes/astro.svg';
+import java from '../../public/Tecnologes/javascript.svg';
 ---
 
 <section
@@ -25,7 +27,7 @@ import mongo from '../../public/Tecnologes/mongodb.svg';
     <div class="w-full m-2 py-8 px-5 overflow-hidden rounded-3xl bg-white dark:bg-zinc-800">
       <div class="relative w-full items-center flex content-center mb-4 size-5 font-bold">
         <Image class="mr-2" src={icon1} alt="icono" />
-        <h2 class="text-black text-lg">Experiencia Laboral</h2>
+        <h2 class="dark:text-white text-black text-lg">Experiencia Laboral</h2>
         <a
           href="https://front-production-2321.up.railway.app/"
           rel="noopener"
@@ -37,12 +39,10 @@ import mongo from '../../public/Tecnologes/mongodb.svg';
       </div>
       <h2 class="ml-1 dark:text-white mt-2 text-2xl">Bmw</h2>
       <p class="size-4 dark:text-gray-400 font-bold text-gray-700 w-full text-pretty md:pb-2">
-        Elabore este sitio web como proyecto personañ
+        Elabore este sitio web como proyecto personal
       </p>
-      <h4 class="mt-4 dark:text-gray-200 text-black font-bold">
-        React, NodeJs, MongoDB, Tailwing, JavaScript.
-      </h4>
-      <div class="flex z-[999]">
+
+      <div class="flex xm:pt-8 py-4 z-[999]">
         <div class="flex pointer pr-2">
           <Image
             class="w-10 h-10 transition-all hover:scale-105"
@@ -51,20 +51,20 @@ import mongo from '../../public/Tecnologes/mongodb.svg';
           />
         </div>
         <div class="flex pointer pr-2 transition-all hover:scale-105">
-          <Image class="w-10 h-10" src={react} alt="icono de react" />
+          <Image class="w-10 sm:w-8 sm:h-8 h-10" src={react} alt="icono de react" />
         </div>
         <div class="flex pointer pr-2 transition-all hover:scale-105">
-          <Image class="w-10 h-10" src={mongo} alt="icono de mongo" />
+          <Image class="w-10 sm:w-8 sm:h-8 h-10" src={mongo} alt="icono de mongo" />
         </div>
         <div>
-          <Image class="w-10 h-10" src={node} alt="icono de node" />
+          <Image class="w-10 sm:w-8 sm:h-8 h-10" src={node} alt="icono de node" />
         </div>
       </div>
 
-      <div class="relative h-[20rem] mt-8">
+      <div class="relative sm:h-[13rem] h-[20rem] mt-8">
         <a href="https://front-production-2321.up.railway.app/" rel="noopener" target="_blank">
           <Image
-            class="project_primary-img rounded-xl absolute w-[90%] h-[26rem] -right-6 hover:scale-105 duration-500 transition-all ease-in-out"
+            class="project_primary-img rounded-xl absolute sm:w-full sm:h-[15rem] w-[90%] h-[26rem] -right-6 hover:scale-105 duration-500 transition-all ease-in-out"
             src={Bmw}
             alt="imagen de proyecto"
           />
@@ -79,7 +79,7 @@ import mongo from '../../public/Tecnologes/mongodb.svg';
     >
       <div class="relative w-full items-center flex content-center mb-4 size-5 font-bold">
         <Image class="mr-2" src={icon1} alt="icono" />
-        <h2 class="text-black text-lg">Experiencia Laboral</h2>
+        <h2 class="dark:text-white text-black text-lg">Experiencia Laboral</h2>
         <a
           href="https://cda-ecoauto-tunja.vercel.app/"
           rel="noopener"
@@ -93,14 +93,27 @@ import mongo from '../../public/Tecnologes/mongodb.svg';
       <p class="size-4 dark:text-gray-400 font-bold text-gray-700 w-full text-pretty md:pb-2">
         Elabore este sitio web para una empresa reconocida en Tunja
       </p>
-      <h4 class="mt-4 dark:text-gray-200 text-black font-bold">
-        Astro, TypeScrip, JavaScript, Css, Tailwind, Html.
-      </h4>
 
-      <div class="relative h-60 mt-8">
+      <div class="flex sm:pt-8 py-4 z-[999]">
+        <div class="flex pointer pr-2">
+          <Image
+            class="w-10 h-10 transition-all hover:scale-105"
+            src={tailwind}
+            alt="icono de tailwind"
+          />
+        </div>
+        <div class="flex pointer pr-2 transition-all hover:scale-105">
+          <Image class="w-10 sm:w-8 sm:h-8 h-10" src={astro} alt="icono de astro" />
+        </div>
+        <div class="flex pointer pr-2 transition-all hover:scale-105">
+          <Image class="w-10 sm:w-8 sm:h-8 h-10" src={java} alt="icono de mongo" />
+        </div>
+      </div>
+
+      <div class="relative sm:h-52 h-60 mt-8">
         <a href="https://cda-ecoauto-tunja.vercel.app/" rel="noopener" target="_blank">
           <Image
-            class="project_primary-img rounded-xl absolute w-full h-80 -right-6 hover:scale-105 duration-500 transition-all ease-in-out"
+            class="project_primary-img rounded-xl absolute w-full h-80 sm:h-[16rem] -right-6 hover:scale-105 duration-500 transition-all ease-in-out"
             src={Cda}
             alt="imagen de proyecto"
           />
@@ -127,14 +140,29 @@ import mongo from '../../public/Tecnologes/mongodb.svg';
       <p class="size-4 dark:text-gray-400 font-bold text-gray-700 w-full text-pretty md:pb-8">
         Desarrolle una copia del login de instagram
       </p>
-      <h4 class="mt-4 dark:text-gray-200 text-black font-bold">
-        React, ReactRouter, Tailwind, Css, Html.
-      </h4>
+      <div class="flex sm:pt-8 py-4 z-[999]">
+        <div class="flex pointer pr-2">
+          <Image
+            class="w-10 h-10 transition-all hover:scale-105"
+            src={tailwind}
+            alt="icono de tailwind"
+          />
+        </div>
+        <div class="flex pointer pr-2 transition-all hover:scale-105">
+          <Image class="w-10 sm:w-8 sm:h-8 h-10" src={react} alt="icono de react" />
+        </div>
+        <div class="flex pointer pr-2 transition-all hover:scale-105">
+          <Image class="w-10 sm:w-8 sm:h-8 h-10" src={mongo} alt="icono de mongo" />
+        </div>
+        <div>
+          <Image class="w-10 sm:w-8 sm:h-8 h-10" src={java} alt="icono de node" />
+        </div>
+      </div>
 
-      <div class="relative h-60 mt-8">
+      <div class="relative sm:h-52 h-60 mt-8">
         <a href="https://instagram-three-jade.vercel.app/" rel="noopener" target="_blank">
           <Image
-            class="project_primary-img rounded-xl absolute w-full h-80 -right-6 hover:scale-105 duration-500 transition-all ease-in-out"
+            class="project_primary-img rounded-xl absolute w-full h-80 sm:h-[16rem] -right-6 hover:scale-105 duration-500 transition-all ease-in-out"
             src={login}
             alt="imagen de proyecto"
           />

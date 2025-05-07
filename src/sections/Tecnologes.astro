@@ -16,20 +16,6 @@ import nextjs from '../../public/Tecnologes/nextjs.svg';
 <section
   class="grid_tecnologia fondo bg-white dark:bg-zinc-800 lg:max-w-4xl lg-ml-auto mg:flex mg:w-full md:w-full md:flex md:justify-center md:items-center"
 >
-  <script>
-    document.getElementById('button')?.addEventListener('click', () => {
-      let tec = document.querySelector('.grid_tecnologia');
-      if (localStorage.theme === 'dark') {
-        localStorage.theme = 'light';
-        document.documentElement.classList.remove('dark');
-        tec.classList.remove('dark');
-        tec.classList.add('fondo');
-      } else {
-        localStorage.theme = 'dark';
-        document.documentElement.classList.add('dark'), tec.classList.add('dark');
-      }
-    });
-  </script>
   <div class="tecnologias_container">
     <div class="content">
       <Image class="img" src={java} alt="icono de java" />
@@ -59,7 +45,7 @@ import nextjs from '../../public/Tecnologes/nextjs.svg';
 
   <style>
     .tecnologias_container-margin {
-      margin-left: 25rem;
+      margin-left: 28rem;
     }
     .content {
       display: flex;
