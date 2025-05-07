@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -9,47 +9,44 @@ import '@fontsource-variable/nunito-sans';
 
 <!doctype html>
 <html lang="es">
-	<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/jpg+xml" href="/julian.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="w-full">
+    <slot />
+    <script src="../scripts/navBar.js"></script>
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
 
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/jpg+xml" href="/julian.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="w-full" >
-		<slot />
-		<script src="../scripts/navBar.js"></script>
-		<script is:inline>
-			const theme = (() => {
-			  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-				return localStorage.getItem("theme");
-			  }
-			  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-				return "dark";
-			  }
-			  return "light";
-			})();
-		  
-			if (theme === "light") {
-			  document.documentElement.classList.remove("dark");
-			} else {
-			  document.documentElement.classList.add("dark");
-			}
-			window.localStorage.setItem("theme", theme);
-		</script>
-	</body>
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+      window.localStorage.setItem('theme', theme);
+    </script>
+  </body>
 </html>
 <style is:global>
-
-	html {
-		font-family: system-ui, sans-serif;
-		background: #F5F5F7;
-		background-size: 224px;
-	}
-	body {
-  		font-family: 'Nunito Sans Variable', sans-serif;
-	}
-
+  html {
+    font-family: system-ui, sans-serif;
+    background: #f5f5f7;
+    background-size: 224px;
+  }
+  body {
+    font-family: 'Nunito Sans Variable', sans-serif;
+  }
 </style>

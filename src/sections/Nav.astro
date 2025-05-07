@@ -1,61 +1,62 @@
 ---
-import { Image } from "astro:assets"
-import IconDow from '../../public/descargar.svg'
-import IconMoom from '../../public/moom.svg'
-import IconLight from '../../public/light.svg'
-
-
+import { Image } from 'astro:assets';
+import IconDow from '../../public/descargar.svg';
+import IconMoom from '../../public/moom.svg';
+import IconLight from '../../public/light.svg';
 ---
-  
-<section class="grid_nav flex  justify-between mx-20 py-6 text-center items-center">
-    <div  class=" dark:bg-slate-100 dark:font-bold dark:text-slate-950 bg-black text-white px-2 py-1 font-bold text-center ">
-        J.P
-    </div>
 
-    <div class="z-10">
-        <button  type="button" class="z-10 boton active:rotate-180 hover:scale-120 transition-all  delay-600 md:ml-4 md:-mr-4 -mr-10 ml-10" id="button">
-            <div class=" dark:hidden" >
-                <Image src={IconMoom} alt="modo oscuro"/>
-            </div>
-                
-            <div class=" hidden bg-slate-50 rounded-3xl p-2 dark:block dark:text-white" >
-                <Image src={IconLight} alt="modo claro"/>
+<section class="grid_nav flex justify-between mx-20 py-6 text-center items-center">
+  <div
+    class="dark:bg-slate-100 dark:font-bold dark:text-slate-950 bg-black text-white px-2 py-1 font-bold text-center"
+  >
+    J.P
+  </div>
 
-            </div>
-        </button>
+  <div class="z-10">
+    <button
+      type="button"
+      class="z-10 boton active:rotate-180 hover:scale-120 transition-all delay-600 md:ml-4 md:-mr-4 -mr-10 ml-10"
+      id="button"
+    >
+      <div class="dark:hidden">
+        <Image src={IconMoom} alt="modo oscuro" />
+      </div>
 
-    </div>
-
-
-    <button class="z-10 px-3 py-2 text-black bg-slate-100 rounded-3xl hover:scale-110 hover:bg-white transition duration-300 ease-in-out border border-black divide-black">
-        <a class=" flex flex-row" href="/cv/CvJulianParra.pdf" download>
-            <Image class=" icon mr-2" src={IconDow} alt="icono" />
-            <span class=" lg:hidden ">Descargar CV</span>
-            <span class=" hidden lg:block ">CV</span>
-        </a>
-
+      <div class="hidden bg-slate-50 rounded-3xl p-2 dark:block dark:text-white">
+        <Image src={IconLight} alt="modo claro" />
+      </div>
     </button>
-    
+  </div>
+
+  <button
+    class="z-10 px-3 py-2 text-black bg-slate-100 rounded-3xl hover:scale-110 hover:bg-white transition duration-300 ease-in-out border border-black divide-black"
+  >
+    <a class="flex flex-row" href="/cv/CvJulianParra.pdf" download>
+      <Image class="icon mr-2" src={IconDow} alt="icono" />
+      <span class="lg:hidden">Descargar CV</span>
+      <span class="hidden lg:block">CV</span>
+    </a>
+  </button>
 </section>
 
 <style>
-    .grid_nav{
-        display: flex;
-        z-index: 900;
-    }
-    .grid_nav--fixer{
-        width: 100%;
-        position: fixed;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        top: 0;
-        right: 0;
-        left: -5rem;
-        z-index: 900;
-        backdrop-filter: blur(10px);
-        box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 10%);
-        padding: 1.5rem 2rem;
-        transition: all 500ms ease-in-out;
-    }
+  .grid_nav {
+    display: flex;
+    z-index: 900;
+  }
+  .grid_nav--fixer {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: -5rem;
+    z-index: 900;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 10%);
+    padding: 1.5rem 2rem;
+    transition: all 500ms ease-in-out;
+  }
 </style>
