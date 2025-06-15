@@ -17,7 +17,7 @@ import '@fontsource-variable/nunito-sans';
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="w-full">
+  <body class="dark:bg-zinc-900">
     <slot />
     <script src="../scripts/navBar.js"></script>
     <script is:inline>
@@ -55,12 +55,14 @@ import '@fontsource-variable/nunito-sans';
   </body>
 </html>
 <style is:global>
-  html {
-    font-family: system-ui, sans-serif;
-    background: #f5f5f7;
-    background-size: 224px;
-  }
+  html,
   body {
     font-family: 'Nunito Sans Variable', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    font-family: system-ui, sans-serif;
+    background: #f5f5f7;
+    width: 100%;
   }
 </style>

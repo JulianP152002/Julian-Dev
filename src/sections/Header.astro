@@ -9,14 +9,15 @@ import IconDow from '../../public/descargar.svg';
 import Whatsapp from '../../public/icons/whatsapp-icon.svg';
 ---
 
-<section class="header flex lg:flex-col md:mx-0 mx-20">
-  <div class="z-0 block items-end content-end">
+<section id="header" class="header h-screen flex lg:flex-col md:px-0 px-20">
+  <picture id="picture-julian" class="z-0 block items-end content-end">
     <img
-      class="julian z-0 top-0 md:bottom-28 xx:bottom-36 block item right-0 md:right-20 sm:right-10 xm:right-3 absolute"
+      class="julian object-cover z-0 top-1 md:bottom-28 xx:bottom-36 block right-0 md:right-24 sm:right-10
+xm:right-3 absolute"
       src={Julian.src}
       alt=""
     />
-  </div>
+  </picture>
   <div
     class="z-10 lg:pt-1 lg:items-start lg:w-3/4 md:w-full md:pt-36 xm:pt-44 items-center text-center"
   >
@@ -48,11 +49,12 @@ import Whatsapp from '../../public/icons/whatsapp-icon.svg';
       </button>
     </div>
     <p
+      id="header-title"
       class="text w-3/4 md:w-1/2 text-center text-3xl md:text-2xl xx:text-xl xx:px-4 xx:w-full px-2 m-auto z-10 text-white font-bold"
     >
       Estoy listo para que llevemos nuestra vision a otro nivel
     </p>
-    <div class="block lg:bottom-32 bottom-12 md:bottom-32 xm:bottom-32 left-0 items-end absolute">
+    <div class="block absolute bottom-5 left-1">
       <ul class="flex ml-2">
         <li
           class="hover:scale-105 ease-linear flex font-medium size-4 text-nowrap text-black bg-white w-auto cursor-pointer text-center items-center content-center py-3 px-4 mr-2 transition-all rounded-md"
@@ -92,7 +94,7 @@ import Whatsapp from '../../public/icons/whatsapp-icon.svg';
 <style>
   .julian {
     z-index: 0;
-    filter: drop-shadow(-3px 6px 21px #000000);
+    mask-image: linear-gradient(black 80%, transparent);
   }
   .text {
     filter: drop-shadow(-3px 6px 21px #000000);
@@ -101,8 +103,25 @@ import Whatsapp from '../../public/icons/whatsapp-icon.svg';
     background-image: url(../../public/portada.jpg);
     background-size: 50rem 38rem;
     background-repeat: no-repeat;
-    background-position-y: -8rem;
     z-index: 0;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 0.8939130434782608) 90%
+    );
   }
 </style>
+<!-- <script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
 
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      scrub: 1,
+    },
+  });
+  tl.to('#header-title', { opacity: 0, duration: 0.000001 });
+</script> -->

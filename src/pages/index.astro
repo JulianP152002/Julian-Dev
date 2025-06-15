@@ -9,31 +9,17 @@ import About from '../sections/About.astro';
 ---
 
 <Layout title="Portafolio Julian">
-  <main class="w-full dark:bg-zinc-900">
-    <div class="bg h-[36rem] sm:h-[33rem]">
-      <Nav />
-      <Header />
-    </div>
-    <About />
+  <Nav />
+  <Header />
+  <About />
 
-    <Projects />
-    <Tecnologes />
-    <Footer />
-  </main>
+  <Projects />
+  <Tecnologes />
+  <Footer />
 </Layout>
 
 <style>
   .nav {
     z-index: 999;
-  }
-  .bg {
-    width: 100%;
-
-    background: rgb(255, 255, 255);
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(0, 0, 0, 0.8939130434782608) 90%
-    );
   }
 </style>
